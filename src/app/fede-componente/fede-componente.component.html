@@ -2,7 +2,18 @@
 
 <ul>
     <li *ngFor=" let personas of fedeLista">
-        {{personas.name }}-Typo:{{personas.type}}
+        {{personas.name }}-Type:{{personas.type}}
 
     </li>
 </ul>
+<h3>Add persona</h3>
+<input #personasName placeholder="Name"/>
+<input #personasType placeholder="Type"/>
+<button (click)="addPersonas({name:personasName.value,type:personasType.value})">Add persona</button>
+
+<h3>Add select</h3>
+<input #personasNames placeholder="Name"/>
+<select #personasTypes>
+<option *ngFor="let type of tiposPersona"[value]="type">{{type}}</option>
+</select>
+<button (click)="addPersonas({name:personasNames.value,type:personasTypes.value})">Add persona</button>
