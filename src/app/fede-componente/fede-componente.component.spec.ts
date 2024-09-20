@@ -10,7 +10,7 @@ describe('FedeComponenteComponent', () => {
     await TestBed.configureTestingModule({
       imports: [FedeComponenteComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FedeComponenteComponent);
     component = fixture.componentInstance;
